@@ -6,6 +6,7 @@ async function GetData() {
 document.addEventListener('DOMContentLoaded', async () => {
     const jsonList = document.getElementById('jsonList');
     const DATA = await GetData();
+    document.getElementById('big-head').textContent = `ChatGPT Prompts (${DATA.length})`;
     DATA.forEach(item => {
         for (const key in item) {
             const he = document.createElement('h2');
